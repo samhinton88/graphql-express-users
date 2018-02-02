@@ -24,7 +24,7 @@ const UserType = new GraphQLObjectType({
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
-  firstName: {
+  fields: {
     user: {
       type: UserType,
       args: { id: { type: GraphQLString } },
