@@ -11,6 +11,8 @@ const {
 // must be above user type - order of definition is important
 const CompanyType = new GraphQLObjectType({
   name: 'Company',
+
+  // use closure of anonymous function to deal with problem caused by load-up order
   fields: () => ({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
